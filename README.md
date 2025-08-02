@@ -41,7 +41,7 @@ The main goal is to balance consumer privacy with energy suppliers' need for ene
 The aim of this project is to enhance privacy for user data by aggregating it, allowing individuals to view their own detailed consumption while also enabling energy suppliers to conduct analyses and calculate billing. The system simulation demonstrates the potential integration of a Privacy Enhancing System (PES) without significantly altering the existing operations of smart meters, data concentrators, and the Meter Data Management System (MDMS). Additionally, a user-centric system has been developed to enable users to access their detailed consumption data. We chose the implement the system using Python due to the availability of the Paillier Encryption module, `phe`. 
 
 <p align="center">
-  <img src="images/class-diagram-overview.JPG" width=1200px />
+  <img src="Images/class-diagram-overview.JPG" width=1200px />
 </p>
 
 _**Figure 1.** UML Class Diagram of the system. Only the class names were kept in the diagram for conciseness and to emphasize on the relationships between the classes._
@@ -66,7 +66,7 @@ Upon initialization, the smart meter instance requires the PES public key, a fil
 Importantly, the generation of consumption data is simulated with the load_data function on line 16. The openpyxl library for reading and writing Excel files was utilized in order to load an existing Excel workbook from a file so that it can be manipulated within our script. 
 
 <p align="center">
-  <img src="images/smart-meter-class.JPG" width=500px />
+  <img src="Images/smart-meter-class.JPG" width=500px />
 </p>
 
 _**Figure 2:** SmartMeter Class UML Diagram._
@@ -112,7 +112,7 @@ Ultimately, the success of AES implementation depends on proper key management. 
 The Data Concentrator acts as the middleman in our system. Its purpose is to connect the other system components and transfer data between them. Although this component could be removed - the smart meters can be directly connected to the PES, and the PES can be directly connected to the MDMS - it would make the system much more complicated to change, and the various references to the connecting components would be scattered across the system. The structure of the DataConcentrator class is as follows:
 
 <p align="center">
-  <img src="images/data-concentrator-class.JPG" width=500px />
+  <img src="Images/data-concentrator-class.JPG" width=500px />
 </p>
 
 _**Figure 3:** DataConcentrator Class UML Diagram._
@@ -153,7 +153,7 @@ This choice ensures that the added processing time due to Paillier's homomorphic
 We provide below a UML diagram representing the internal structure of the PES class.
 
 <p align="center">
-  <img src="images/privacy-enhancing-system-class.JPG" width=500px />
+  <img src="Images/privacy-enhancing-system-class.JPG" width=500px />
 </p>
 
 _**Figure 4:** PrivacyEnhancingSystem Class UML Diagram._
@@ -206,7 +206,7 @@ The MdmsManager class is essential in managing and analyzing data within the MDM
 We provide below more details regarding the implementation of the MDMS Manager within our system.
 
 <p align="center">
-  <img src="images/mdms-manager-class.JPG" width=500px />
+  <img src="Images/mdms-manager-class.JPG" width=500px />
 </p>
 
 
@@ -250,7 +250,7 @@ In the `c555w24/m5/src/mdms-ui` folder, the `app.js` file is the core component 
 One of our main requirements was the ability for customers to have secure access to their own energy consumption data. This aspect of our system is achieved through the `user_centric_system.py` class which is accessible within the folder `src` and referred to in the following sections. 
 
 <p align="center">
-  <img src="images/user-centric-system-class.JPG" width=500px />
+  <img src="Images/user-centric-system-class.JPG" width=500px />
 </p>
 
 _**Figure 6:** UserCentricSystem Class UML Diagram._
